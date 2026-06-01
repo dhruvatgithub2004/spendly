@@ -1,0 +1,156 @@
+/* Hero — centered single-column layout */
+.hero {
+    padding: 4rem 2rem 0;
+    display: block;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(26, 71, 42, 0.2);
+    margin-bottom: 2rem;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Title */
+.hero-title {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    max-width: 640px;
+    margin-bottom: 1.25rem;
+    line-height: 1.05;
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--accent);
+    display: block;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    max-width: 480px;
+    text-align: center;
+    margin-bottom: 2.25rem;
+}
+
+/* Actions */
+.hero-actions {
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+/* Visual */
+.hero-visual {
+    width: 100%;
+    max-width: 680px;
+    display: block;
+}
+
+/* Mock card */
+.mock-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem 1.75rem;
+    text-align: left;
+}
+
+/* Window dots */
+.mock-window-dots {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green  { background: #28c840; }
+
+/* Stat tiles */
+.mock-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.mock-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding-right: 1rem;
+}
+
+.mock-stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-weight: 400;
+}
+
+.mock-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.mock-stat-sub {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+}
+
+.mock-stat-sub.danger  { color: var(--danger); }
+.mock-stat-sub.success { color: var(--accent); }
+
+/* Bars — 2-column (label + bar, no amount) */
+.mock-bars { gap: 0.85rem; }
+
+.mock-bar-row { grid-template-columns: 55px 1fr; }
+
+.mock-bar-track { height: 10px; }
+
+.mock-bar-food   { background: #e6a817; }
+.mock-bar-travel { background: #4a90d9; }
+.mock-bar-bills  { background: #7c5cbf; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero { padding: 2.5rem 1.25rem 0; }
+
+    .mock-stat:last-child { display: none; }
+
+    .mock-stats { grid-template-columns: 1fr 1fr; }
+}
