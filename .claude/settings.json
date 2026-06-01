@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push *)",
+      "Bash(git branch *)",
+      "PowerShell(claude --help 2>&1)"
+    ]
+  }
+}
